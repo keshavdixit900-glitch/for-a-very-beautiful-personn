@@ -1,0 +1,407 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Surprise For You 🌸</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "Segoe UI", Arial, sans-serif;
+            overflow-x: hidden;
+            background: linear-gradient(
+                135deg,
+                #ff9a9e,
+                #fad0c4,
+                #fbc2eb,
+                #a6c1ee,
+                #c2ffd8
+            );
+            background-size: 400% 400%;
+            animation: backgroundMove 12s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        @keyframes backgroundMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .card {
+            width: 95%;
+            max-width: 850px;
+            min-height: 600px;
+            padding: 50px 30px;
+            text-align: center;
+            border-radius: 35px;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255,255,255,0.5);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: clamp(35px, 7vw, 65px);
+            text-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            color: #fff;
+            font-size: 22px;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: auto;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+        }
+
+        .highlight {
+            color: #fff700;
+            font-weight: bold;
+        }
+
+        .emoji-line {
+            font-size: 38px;
+            margin: 25px 0;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .surprise-btn {
+            margin-top: 35px;
+            padding: 18px 35px;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(45deg, #ff1493, #ff69b4, #ff4500);
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(255,20,147,0.4);
+            transition: 0.3s ease;
+        }
+
+        .surprise-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 15px 35px rgba(255,20,147,0.6);
+        }
+
+        .surprise-btn:active {
+            transform: scale(0.95);
+        }
+
+        #surprise {
+            display: none;
+            margin-top: 35px;
+            animation: appear 1.2s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .message {
+            color: white;
+            font-size: 42px;
+            font-weight: bold;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            margin-bottom: 25px;
+        }
+
+        .flowers {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 65px;
+            line-height: 1.4;
+        }
+
+        .flower {
+            display: inline-block;
+            animation: flowerFloat 3s ease-in-out infinite;
+        }
+
+        .flower:nth-child(2) { animation-delay: .2s; }
+        .flower:nth-child(3) { animation-delay: .4s; }
+        .flower:nth-child(4) { animation-delay: .6s; }
+        .flower:nth-child(5) { animation-delay: .8s; }
+        .flower:nth-child(6) { animation-delay: 1s; }
+        .flower:nth-child(7) { animation-delay: 1.2s; }
+        .flower:nth-child(8) { animation-delay: 1.4s; }
+        .flower:nth-child(9) { animation-delay: 1.6s; }
+
+        @keyframes flowerFloat {
+            0%,100% {
+                transform: translateY(0) rotate(-5deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(8deg);
+            }
+        }
+
+        .for-you {
+            margin-top: 25px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: 0 3px 12px rgba(0,0,0,0.3);
+        }
+
+        /* Falling hearts */
+        .heart {
+            position: fixed;
+            top: -50px;
+            font-size: 25px;
+            animation: fall linear forwards;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-50px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Falling flowers after surprise */
+        .falling-flower {
+            position: fixed;
+            top: -80px;
+            font-size: 55px;
+            pointer-events: none;
+            z-index: 99;
+            animation: flowerFall linear forwards;
+        }
+
+        @keyframes flowerFall {
+            0% {
+                transform: translateY(-80px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(110vh) rotate(500deg);
+                opacity: 0.8;
+            }
+        }
+
+        .small-note {
+            margin-top: 25px;
+            color: white;
+            font-size: 17px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 35px 18px;
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+
+            .message {
+                font-size: 30px;
+            }
+
+            .flowers {
+                font-size: 50px;
+            }
+
+            .surprise-btn {
+                font-size: 17px;
+                padding: 15px 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <div class="emoji-line">
+            🌸 💖 🌷 ✨ 🌹 💕 🌻 ✨ 💐
+        </div>
+
+        <h1>You Are Truly Unique ✨</h1>
+
+        <p class="subtitle">
+            There are many beautiful people in the world,
+            but some people have a special kind of beauty
+            that makes them <span class="highlight">stand out naturally</span>. 🌸
+            <br><br>
+
+            I just wanted to say that you are
+            <span class="highlight">beautiful, special and wonderfully unique</span>.
+            🌷✨
+            <br><br>
+
+            Your smile, your personality and the way you carry yourself
+            make you someone who is genuinely memorable. 💐
+        </p>
+
+        <button class="surprise-btn" onclick="showSurprise()">
+            💝 Click Here For Surprise 💝
+        </button>
+
+        <div id="surprise">
+
+            <div class="message">
+                🌸 This Is For You 🌸
+            </div>
+
+            <div class="flowers">
+                <span class="flower">🌸</span>
+                <span class="flower">🌷</span>
+                <span class="flower">🌹</span>
+                <span class="flower">🌻</span>
+                <span class="flower">💐</span>
+                <span class="flower">🌺</span>
+                <span class="flower">🪻</span>
+                <span class="flower">🌼</span>
+                <span class="flower">🌸</span>
+            </div>
+
+            <div class="for-you">
+                💖 This Is For You 💖
+            </div>
+
+            <div class="small-note">
+                Keep smiling and keep being wonderfully you. ✨😊🌷
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        /* Initial floating hearts */
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+
+            const hearts = ["💖", "💕", "💗", "💓", "💞", "✨"];
+
+            heart.innerHTML =
+                hearts[Math.floor(Math.random() * hearts.length)];
+
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration =
+                (4 + Math.random() * 5) + "s";
+
+            heart.style.fontSize =
+                (18 + Math.random() * 20) + "px";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 9000);
+        }
+
+        setInterval(createHeart, 700);
+
+
+        /* Surprise button */
+        function showSurprise() {
+
+            const surprise = document.getElementById("surprise");
+
+            surprise.style.display = "block";
+
+            /* Create lots of falling flowers */
+            for (let i = 0; i < 45; i++) {
+
+                setTimeout(() => {
+
+                    const flower = document.createElement("div");
+
+                    flower.className = "falling-flower";
+
+                    const flowers = [
+                        "🌸",
+                        "🌷",
+                        "🌹",
+                        "🌻",
+                        "🌺",
+                        "💐",
+                        "🪻",
+                        "🌼",
+                        "🌸"
+                    ];
+
+                    flower.innerHTML =
+                        flowers[Math.floor(Math.random() * flowers.length)];
+
+                    flower.style.left =
+                        Math.random() * 100 + "vw";
+
+                    flower.style.fontSize =
+                        (40 + Math.random() * 35) + "px";
+
+                    flower.style.animationDuration =
+                        (4 + Math.random() * 5) + "s";
+
+                    document.body.appendChild(flower);
+
+                    setTimeout(() => {
+                        flower.remove();
+                    }, 10000);
+
+                }, i * 120);
+            }
+
+            /* Extra hearts */
+            for (let i = 0; i < 20; i++) {
+                setTimeout(createHeart, i * 150);
+            }
+
+            /* Scroll to surprise */
+            setTimeout(() => {
+                surprise.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            }, 300);
+        }
+
+    </script>
+
+</body>
+</html>
+```
