@@ -2,15 +2,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
 
-    <!-- Mobile screen optimization -->
     <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+          content="width=device-width,
+          initial-scale=1.0,
+          maximum-scale=1.0,
+          user-scalable=no">
 
-    <title>✨ A Special Surprise For You ✨</title>
+    <title>🌸 A Little Surprise 🌸</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -18,13 +22,19 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        html, body {
+        html,
+        body {
             width: 100%;
             min-height: 100%;
         }
 
         body {
-            font-family: "Segoe UI", Arial, sans-serif;
+
+            font-family:
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
             overflow-x: hidden;
 
             background:
@@ -34,20 +44,24 @@
                     #ff7eb3,
                     #c471ed,
                     #12c2e9,
-                    #fbc2eb
+                    #fbc2eb,
+                    #a1c4fd
                 );
 
-            background-size: 500% 500%;
-            animation: backgroundAnimation 12s ease infinite;
+            background-size: 600% 600%;
 
-            color: white;
+            animation:
+                backgroundAnimation 12s
+                ease infinite;
         }
 
-        /* ==============================
-           BACKGROUND ANIMATION
-        ============================== */
+
+        /* =====================================
+           BACKGROUND
+        ===================================== */
 
         @keyframes backgroundAnimation {
+
             0% {
                 background-position: 0% 50%;
             }
@@ -69,140 +83,198 @@
             }
         }
 
-        /* ==============================
-           MAIN MOBILE CONTAINER
-        ============================== */
+
+        /* =====================================
+           PAGE
+        ===================================== */
 
         .page {
+
             width: 100%;
+
             min-height: 100vh;
 
             display: flex;
+
             justify-content: center;
+
             align-items: center;
 
-            padding: 18px;
+            padding: 12px;
         }
 
+
+        /* =====================================
+           MAIN CARD
+        ===================================== */
+
         .card {
+
             width: 100%;
-            max-width: 700px;
 
-            min-height: 95vh;
+            min-height: 96vh;
 
-            padding: 30px 18px 45px;
+            padding:
+                30px
+                15px
+                50px;
 
             display: flex;
+
             flex-direction: column;
+
             justify-content: center;
+
             align-items: center;
 
             text-align: center;
 
-            background: rgba(255,255,255,0.18);
-
-            border: 1px solid rgba(255,255,255,0.45);
-
             border-radius: 30px;
 
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
+            background:
+                rgba(255,255,255,0.20);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.45);
+
+            backdrop-filter:
+                blur(15px);
+
+            -webkit-backdrop-filter:
+                blur(15px);
 
             box-shadow:
-                0 15px 45px rgba(0,0,0,0.20);
+                0 15px 50px
+                rgba(0,0,0,0.20);
 
             overflow: hidden;
         }
 
-        /* ==============================
-           TOP FLOWERS
-        ============================== */
+
+        /* =====================================
+           TOP EMOJIS
+        ===================================== */
 
         .top-emojis {
+
             width: 100%;
 
-            font-size: clamp(25px, 8vw, 45px);
+            font-size:
+                clamp(
+                    25px,
+                    8vw,
+                    45px
+                );
 
-            line-height: 1.5;
+            line-height: 1.6;
 
-            margin-bottom: 18px;
+            margin-bottom: 15px;
 
-            animation: floatingEmojis 3s ease-in-out infinite;
+            animation:
+                emojiFloat 3s
+                ease-in-out infinite;
         }
 
-        @keyframes floatingEmojis {
-            0%,100% {
-                transform: translateY(0);
+
+        @keyframes emojiFloat {
+
+            0%,
+            100% {
+                transform:
+                    translateY(0);
             }
 
             50% {
-                transform: translateY(-8px);
+                transform:
+                    translateY(-8px);
             }
         }
 
-        /* ==============================
+
+        /* =====================================
            HEADING
-        ============================== */
+        ===================================== */
 
         h1 {
+
             width: 100%;
 
-            font-size: clamp(34px, 10vw, 62px);
+            font-size:
+                clamp(
+                    34px,
+                    10vw,
+                    62px
+                );
 
-            line-height: 1.1;
+            line-height: 1.15;
+
+            color: white;
 
             margin-bottom: 22px;
 
-            color: white;
-
             text-shadow:
-                0 4px 15px rgba(0,0,0,0.25);
+                0 4px 15px
+                rgba(0,0,0,0.25);
         }
 
+
         .sparkle {
+
             color: #fff700;
         }
 
-        /* ==============================
-           MAIN MESSAGE
-        ============================== */
+
+        /* =====================================
+           MESSAGE
+        ===================================== */
 
         .message-text {
+
             width: 100%;
 
-            max-width: 600px;
+            max-width: 620px;
 
-            font-size: clamp(17px, 5vw, 22px);
+            color: white;
+
+            font-size:
+                clamp(
+                    17px,
+                    5vw,
+                    22px
+                );
 
             line-height: 1.75;
 
-            color: white;
-
             text-shadow:
-                0 2px 8px rgba(0,0,0,0.20);
+                0 2px 8px
+                rgba(0,0,0,0.20);
         }
 
+
         .highlight {
+
             color: #fff700;
 
             font-weight: bold;
-
-            text-shadow:
-                0 2px 8px rgba(255,255,0,0.25);
         }
 
-        /* ==============================
-           BUTTON
-        ============================== */
+
+        /* =====================================
+           CLICK BUTTON
+        ===================================== */
 
         .surprise-button {
-            width: 92%;
 
-            max-width: 380px;
+            width: 90%;
 
-            margin-top: 32px;
+            max-width: 360px;
 
-            padding: 18px 20px;
+            margin-top: 35px;
+
+            padding:
+                18px
+                25px;
 
             border: none;
 
@@ -213,72 +285,80 @@
                     45deg,
                     #ff006e,
                     #ff4d9d,
-                    #ff1493
+                    #ff1493,
+                    #ff69b4
                 );
 
             color: white;
 
-            font-size: clamp(17px, 5vw, 21px);
+            font-size:
+                clamp(
+                    19px,
+                    5.5vw,
+                    23px
+                );
 
             font-weight: bold;
 
-            letter-spacing: 0.5px;
-
-            box-shadow:
-                0 10px 30px rgba(255,0,110,0.4);
-
             cursor: pointer;
 
-            transition: 0.25s;
+            box-shadow:
+                0 10px 30px
+                rgba(255,0,110,0.45);
+
+            transition:
+                transform 0.2s;
         }
+
 
         .surprise-button:active {
-            transform: scale(0.94);
+
+            transform:
+                scale(0.92);
         }
 
-        /* ==============================
-           SURPRISE SECTION
-        ============================== */
+
+        /* =====================================
+           SURPRISE FLOWER AREA
+        ===================================== */
 
         #surprise {
+
             display: none;
 
             width: 100%;
 
-            margin-top: 38px;
+            margin-top: 40px;
 
-            animation: surpriseAppear 1.2s ease forwards;
+            animation:
+                surpriseAppear
+                1s ease forwards;
         }
+
 
         @keyframes surpriseAppear {
 
-            0% {
+            from {
+
                 opacity: 0;
-                transform: scale(0.5);
+
+                transform:
+                    scale(0.3);
             }
 
-            100% {
+            to {
+
                 opacity: 1;
-                transform: scale(1);
+
+                transform:
+                    scale(1);
             }
         }
 
-        .surprise-title {
-            font-size: clamp(30px, 9vw, 50px);
 
-            line-height: 1.25;
-
-            margin-bottom: 25px;
-
-            color: white;
-
-            text-shadow:
-                0 4px 15px rgba(0,0,0,0.3);
-        }
-
-        /* ==============================
-           BIG FLOWERS
-        ============================== */
+        /* =====================================
+           MANY BIG FLOWERS
+        ===================================== */
 
         .flowers-container {
 
@@ -292,266 +372,300 @@
 
             flex-wrap: wrap;
 
-            gap: 12px;
+            gap: 7px;
 
-            padding: 10px;
+            padding: 10px 2px;
         }
+
 
         .flower {
 
             display: inline-block;
 
-            font-size: clamp(50px, 15vw, 85px);
-
-            animation:
-                flowerFloat 2.5s ease-in-out infinite;
+            font-size:
+                clamp(
+                    55px,
+                    17vw,
+                    90px
+                );
 
             filter:
-                drop-shadow(0 5px 5px rgba(0,0,0,0.15));
+                drop-shadow(
+                    0 6px 5px
+                    rgba(0,0,0,0.18)
+                );
+
+            animation:
+                flowerFloat
+                2.5s
+                ease-in-out
+                infinite;
         }
+
 
         .flower:nth-child(1) {
             animation-delay: 0s;
         }
 
         .flower:nth-child(2) {
-            animation-delay: .2s;
+            animation-delay: .15s;
         }
 
         .flower:nth-child(3) {
-            animation-delay: .4s;
+            animation-delay: .3s;
         }
 
         .flower:nth-child(4) {
-            animation-delay: .6s;
+            animation-delay: .45s;
         }
 
         .flower:nth-child(5) {
-            animation-delay: .8s;
+            animation-delay: .6s;
         }
 
         .flower:nth-child(6) {
-            animation-delay: 1s;
+            animation-delay: .75s;
         }
 
         .flower:nth-child(7) {
-            animation-delay: 1.2s;
+            animation-delay: .9s;
         }
 
         .flower:nth-child(8) {
-            animation-delay: 1.4s;
+            animation-delay: 1.05s;
         }
 
         .flower:nth-child(9) {
-            animation-delay: 1.6s;
+            animation-delay: 1.2s;
         }
+
+        .flower:nth-child(10) {
+            animation-delay: 1.35s;
+        }
+
+        .flower:nth-child(11) {
+            animation-delay: 1.5s;
+        }
+
+        .flower:nth-child(12) {
+            animation-delay: 1.65s;
+        }
+
 
         @keyframes flowerFloat {
 
-            0%,100% {
+            0%,
+            100% {
+
                 transform:
                     translateY(0)
                     rotate(-5deg);
             }
 
             50% {
+
                 transform:
                     translateY(-15px)
                     rotate(7deg);
             }
         }
 
-        /* ==============================
-           THIS IS FOR YOU
-        ============================== */
 
-        .for-you {
+        /* =====================================
+           FALLING FLOWERS
+        ===================================== */
 
-            margin-top: 25px;
+        .falling-flower {
 
-            font-size: clamp(27px, 8vw, 42px);
+            position: fixed;
 
-            font-weight: bold;
+            top: -120px;
 
-            color: white;
+            pointer-events: none;
 
-            text-shadow:
-                0 4px 15px rgba(0,0,0,0.3);
+            z-index: 9999;
 
             animation:
-                textGlow 2s infinite alternate;
+                flowerRain
+                linear
+                forwards;
         }
 
-        @keyframes textGlow {
 
-            from {
-                transform: scale(1);
+        @keyframes flowerRain {
+
+            0% {
+
+                transform:
+                    translateY(-120px)
+                    translateX(0)
+                    rotate(0deg);
+
+                opacity: 1;
             }
 
-            to {
-                transform: scale(1.04);
+            25% {
+
+                transform:
+                    translateY(25vh)
+                    translateX(30px)
+                    rotate(180deg);
+            }
+
+            50% {
+
+                transform:
+                    translateY(50vh)
+                    translateX(-30px)
+                    rotate(360deg);
+            }
+
+            75% {
+
+                transform:
+                    translateY(75vh)
+                    translateX(25px)
+                    rotate(540deg);
+            }
+
+            100% {
+
+                transform:
+                    translateY(115vh)
+                    translateX(-20px)
+                    rotate(720deg);
+
+                opacity: 0.85;
             }
         }
 
-        .little-message {
 
-            margin-top: 18px;
-
-            font-size: clamp(15px, 4.5vw, 19px);
-
-            line-height: 1.6;
-
-            color: white;
-
-            padding: 0 10px;
-        }
-
-        /* ==============================
+        /* =====================================
            FALLING HEARTS
-        ============================== */
+        ===================================== */
 
         .heart {
 
             position: fixed;
 
-            top: -60px;
+            top: -70px;
 
             pointer-events: none;
 
-            z-index: 1000;
+            z-index: 9998;
 
             animation:
-                heartFall linear forwards;
+                heartFall
+                linear
+                forwards;
         }
+
 
         @keyframes heartFall {
 
             0% {
+
                 transform:
-                    translateY(-60px)
+                    translateY(-70px)
                     rotate(0deg);
 
                 opacity: 1;
             }
 
             100% {
+
                 transform:
-                    translateY(110vh)
+                    translateY(115vh)
                     rotate(360deg);
 
                 opacity: 0;
             }
         }
 
-        /* ==============================
-           FALLING FLOWERS
-        ============================== */
 
-        .falling-flower {
-
-            position: fixed;
-
-            top: -100px;
-
-            pointer-events: none;
-
-            z-index: 999;
-
-            animation:
-                flowerRain linear forwards;
-        }
-
-        @keyframes flowerRain {
-
-            0% {
-                transform:
-                    translateY(-100px)
-                    rotate(0deg);
-
-                opacity: 1;
-            }
-
-            100% {
-                transform:
-                    translateY(115vh)
-                    rotate(720deg);
-
-                opacity: 0.9;
-            }
-        }
-
-        /* ==============================
-           SMALL MOBILE SCREEN
-        ============================== */
+        /* =====================================
+           MOBILE
+        ===================================== */
 
         @media (max-width: 380px) {
 
             .page {
-                padding: 10px;
+                padding: 8px;
             }
 
             .card {
+
                 padding:
                     25px
-                    12px
-                    35px;
+                    10px
+                    40px;
 
                 border-radius: 24px;
             }
 
             .message-text {
+
                 line-height: 1.6;
             }
 
-            .surprise-button {
-                width: 95%;
-            }
-
             .flowers-container {
-                gap: 5px;
+
+                gap: 3px;
             }
         }
 
-        /* ==============================
-           TABLET / LARGE MOBILE
-        ============================== */
 
         @media (min-width: 600px) {
 
             .page {
-                padding: 30px;
+                padding: 25px;
             }
 
             .card {
-                padding: 55px 35px;
+
+                padding:
+                    50px
+                    30px;
             }
 
             .flowers-container {
-                gap: 20px;
+
+                gap: 15px;
             }
         }
 
     </style>
+
 </head>
 
+
 <body>
+
 
 <div class="page">
 
     <div class="card">
 
-        <!-- TOP EMOJIS -->
+
+        <!-- TOP DECORATION -->
 
         <div class="top-emojis">
-            🌸 💖 🌷 ✨ 🌹 💕 🌻 💐 🌺
+
+            🌸 💖 🌷 ✨ 🌹 💕
+            🌻 💐 🌺 🌼
+
         </div>
 
 
         <!-- HEADING -->
 
         <h1>
+
             You Are Truly
-            <span class="sparkle">Unique ✨</span>
+            <span class="sparkle">
+                Unique ✨
+            </span>
+
         </h1>
 
 
@@ -559,10 +673,18 @@
 
         <div class="message-text">
 
-            There are so many people in the world,
-            but some people have a special kind of
-            <span class="highlight">beauty and charm</span>
-            that naturally makes them stand out. 🌸
+            There are so many people
+            in the world,
+
+            but some people have a
+            special kind of
+
+            <span class="highlight">
+                beauty and charm
+            </span>
+
+            that naturally makes them
+            stand out. 🌸
 
             <br><br>
 
@@ -570,18 +692,21 @@
 
             <br><br>
 
-            I just wanted to tell you that you are
+            I just wanted to tell you
+            that you are
+
             <span class="highlight">
-                beautiful, special and wonderfully unique.
+                beautiful, special
+                and wonderfully unique.
             </span>
 
             🌷✨
 
             <br><br>
 
-            Your smile, your personality and the way
-            you are yourself make you genuinely
-            memorable. 💐💖
+            Your smile, your personality
+            and the way you are yourself
+            make you genuinely memorable. 💐💖
 
         </div>
 
@@ -592,23 +717,19 @@
             class="surprise-button"
             onclick="showSurprise()">
 
-            💝 Click Here For Surprise 💝
+            💖 Click Here 💖
 
         </button>
 
 
-        <!-- SURPRISE -->
+        <!-- FLOWERS AFTER CLICK -->
 
         <div id="surprise">
 
-            <div class="surprise-title">
-                🌸 This Is For You 🌸
-            </div>
-
-
-            <!-- BIG FLOWERS -->
-
             <div class="flowers-container">
+
+
+                <!-- MANY DIFFERENT FLOWERS -->
 
                 <span class="flower">🌸</span>
 
@@ -618,9 +739,9 @@
 
                 <span class="flower">🌻</span>
 
-                <span class="flower">💐</span>
-
                 <span class="flower">🌺</span>
+
+                <span class="flower">💐</span>
 
                 <span class="flower">🪻</span>
 
@@ -628,57 +749,80 @@
 
                 <span class="flower">🌸</span>
 
-            </div>
+                <span class="flower">🌷</span>
 
+                <span class="flower">🌹</span>
 
-            <div class="for-you">
-                💖 This Is For You 💖
-            </div>
+                <span class="flower">🌺</span>
 
-
-            <div class="little-message">
-
-                Keep smiling,
-                keep shining,
-                and keep being wonderfully you. ✨
-
-                <br>
-
-                🌷🌸💐🌹🌻💖
 
             </div>
 
         </div>
+
 
     </div>
 
 </div>
 
 
+
 <script>
 
-    /* ==================================
-       FLOATING HEARTS
-    ================================== */
+
+    /* =====================================
+       FLOWER TYPES
+    ===================================== */
+
+    const flowerList = [
+
+        "🌸",
+        "🌷",
+        "🌹",
+        "🌻",
+        "🌺",
+        "💐",
+        "🪻",
+        "🌼",
+        "🌸",
+        "🌷",
+        "🌹",
+        "🌺",
+        "💮",
+        "🏵️",
+        "🌻"
+
+    ];
+
+
+    /* =====================================
+       HEART TYPES
+    ===================================== */
+
+    const heartList = [
+
+        "💖",
+        "💕",
+        "💗",
+        "💓",
+        "💞",
+        "💝",
+        "✨"
+
+    ];
+
+
+    /* =====================================
+       CREATE HEART
+    ===================================== */
 
     function createHeart() {
 
         const heart =
             document.createElement("div");
 
-        heart.className = "heart";
-
-        const heartList = [
-
-            "💖",
-            "💕",
-            "💗",
-            "💓",
-            "💞",
-            "💝",
-            "✨"
-
-        ];
+        heart.className =
+            "heart";
 
         heart.innerHTML =
             heartList[
@@ -689,15 +833,22 @@
             ];
 
         heart.style.left =
-            Math.random() * 100 + "vw";
+            Math.random()
+            * 100 + "vw";
 
         heart.style.fontSize =
-            (18 + Math.random() * 18) + "px";
+            (18 +
+            Math.random() * 20)
+            + "px";
 
         heart.style.animationDuration =
-            (4 + Math.random() * 5) + "s";
+            (4 +
+            Math.random() * 5)
+            + "s";
 
-        document.body.appendChild(heart);
+        document.body.appendChild(
+            heart
+        );
 
         setTimeout(
             () => heart.remove(),
@@ -706,17 +857,76 @@
     }
 
 
-    /* Hearts continuously falling */
+    /* =====================================
+       NORMAL HEART RAIN
+    ===================================== */
 
     setInterval(
         createHeart,
-        650
+        700
     );
 
 
-    /* ==================================
+    /* =====================================
+       CREATE FALLING FLOWER
+    ===================================== */
+
+    function createFallingFlower() {
+
+        const flower =
+            document.createElement("div");
+
+        flower.className =
+            "falling-flower";
+
+
+        flower.innerHTML =
+            flowerList[
+                Math.floor(
+                    Math.random()
+                    * flowerList.length
+                )
+            ];
+
+
+        /* Random horizontal position */
+
+        flower.style.left =
+            Math.random()
+            * 100 + "vw";
+
+
+        /* BIG FLOWER SIZE */
+
+        flower.style.fontSize =
+            (45 +
+            Math.random() * 50)
+            + "px";
+
+
+        /* Different falling speed */
+
+        flower.style.animationDuration =
+            (3.5 +
+            Math.random() * 4.5)
+            + "s";
+
+
+        document.body.appendChild(
+            flower
+        );
+
+
+        setTimeout(
+            () => flower.remove(),
+            10000
+        );
+    }
+
+
+    /* =====================================
        SURPRISE BUTTON
-    ================================== */
+    ===================================== */
 
     function showSurprise() {
 
@@ -725,29 +935,34 @@
                 "surprise"
             );
 
+
+        /* Show flowers below button */
+
         surprise.style.display =
             "block";
 
 
-        /* ==================================
-           FLOWER RAIN
-        ================================== */
+        /* =================================
+           MASSIVE FLOWER RAIN
+        ================================= */
 
-        const flowerList = [
+        for (
+            let i = 0;
+            i < 120;
+            i++
+        ) {
 
-            "🌸",
-            "🌷",
-            "🌹",
-            "🌻",
-            "🌺",
-            "💐",
-            "🪻",
-            "🌼"
+            setTimeout(
+                createFallingFlower,
 
-        ];
+                i * 60
+            );
+        }
 
 
-        /* Create lots of flowers */
+        /* =================================
+           EXTRA FLOWER BURST
+        ================================= */
 
         for (
             let i = 0;
@@ -756,105 +971,57 @@
         ) {
 
             setTimeout(
-                () => {
+                createFallingFlower,
 
-                    const flower =
-                        document.createElement(
-                            "div"
-                        );
-
-                    flower.className =
-                        "falling-flower";
-
-
-                    flower.innerHTML =
-                        flowerList[
-                            Math.floor(
-                                Math.random()
-                                * flowerList.length
-                            )
-                        ];
-
-
-                    flower.style.left =
-                        Math.random()
-                        * 100 + "vw";
-
-
-                    /* BIG FLOWERS */
-
-                    flower.style.fontSize =
-                        (45 +
-                        Math.random()
-                        * 40) + "px";
-
-
-                    flower.style.animationDuration =
-                        (4 +
-                        Math.random()
-                        * 5) + "s";
-
-
-                    document.body
-                        .appendChild(
-                            flower
-                        );
-
-
-                    setTimeout(
-                        () =>
-                            flower.remove(),
-                        10000
-                    );
-
-                },
-
-                i * 120
-
+                800 +
+                i * 90
             );
-
         }
 
 
-        /* ==================================
+        /* =================================
            EXTRA HEARTS
-        ================================== */
+        ================================= */
 
         for (
             let i = 0;
-            i < 25;
+            i < 35;
             i++
         ) {
 
             setTimeout(
                 createHeart,
-                i * 150
-            );
 
+                i * 100
+            );
         }
 
 
-        /* ==================================
-           SCROLL TO SURPRISE
-        ================================== */
+        /* =================================
+           SCROLL TO FLOWERS
+        ================================= */
 
         setTimeout(
             () => {
 
                 surprise.scrollIntoView({
+
                     behavior: "smooth",
+
                     block: "center"
+
                 });
 
             },
 
-            300
-
+            400
         );
 
     }
 
+
 </script>
+
 
 </body>
 </html>
